@@ -17,7 +17,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
         //Server settings
         $mail->SMTPDebug = 0;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'ssl0.ovh.net ';                     //Set the SMTP server to send through
+        $mail->Host       = 'ssl0.ovh.net';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'contact@alternance-fest.fr';                     //SMTP username
         $mail->Password   = 'iBCAn7M5rh38sk67DJpYhEPCaYE7st';                               //SMTP password
@@ -113,9 +113,9 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'Message has been sent';
+        return true;
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        return $e->getMessage();
     }
 }
 

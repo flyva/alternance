@@ -331,7 +331,7 @@ https://templatemo.com/tm-583-festava-live
                                         </div>
                                     </div>
                                 </form>
-                                <div id="contactMessage"></div>
+                                <div id="message"></div>
                             </div>
 
                             <div class="tab-pane fade" id="nav-ContactMap" role="tabpanel"
@@ -544,15 +544,40 @@ T e m p l a t e M o
     </div>
 
     <!-- JAVASCRIPT FILES -->
+    <script>
+        const ticketForm = document.getElementById('ticketForm');
+        const messageTicketDiv = document.getElementById('ticketMessage');
+
+        ticketForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche le rechargement de la page
+
+            const formData = new FormData(ticketForm);
+
+            fetch('./php/billeterie.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Affiche le message de validation
+                    messageTicketDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
+                    ticketForm.reset(); // Réinitialise le formulaire
+                })
+                .catch(error => {
+                    messageTicketDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-danger'>Une erreur est survenue.</p>";
+                    console.error(error);
+                });
+        });
+    </script>
 
     <script>
-        const form = document.getElementById('contactForm');
-        const messageDiv = document.getElementById('contactMessage');
+        const contactForm = document.getElementById('contactForm');
+        const messageContactDiv = document.getElementById('message');
 
-        form.addEventListener('submit', function(e) {
-           e.preventDefault(); // Empêche le rechargement de la page
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche le rechargement de la page
 
-            const formData = new FormData(form);
+            const formData = new FormData(contactForm);
 
             fetch('./php/contact.php', {
                 method: 'POST',
@@ -561,11 +586,11 @@ T e m p l a t e M o
                 .then(response => response.text())
                 .then(data => {
                     // Affiche le message de validation
-                    messageDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
-                    form.reset(); // Réinitialise le formulaire
+                    messageContactDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
+                    contactForm.reset(); // Réinitialise le formulaire
                 })
                 .catch(error => {
-                    messageDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-danger'>Une erreur est survenue.</p>";
+                    messageContactDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-danger'>Une erreur est survenue.</p>";
                     console.error(error);
                 });
         });
