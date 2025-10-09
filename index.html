@@ -544,31 +544,6 @@ T e m p l a t e M o
     </div>
 
     <!-- JAVASCRIPT FILES -->
-    <script>
-        const form = document.getElementById('ticketForm');
-        const messageDiv = document.getElementById('ticketMessage');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Empêche le rechargement de la page
-
-            const formData = new FormData(form);
-
-            fetch('./php/billeterie.php', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.text())
-                .then(data => {
-                    // Affiche le message de validation
-                    messageDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
-                    form.reset(); // Réinitialise le formulaire
-                })
-                .catch(error => {
-                    messageDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-danger'>Une erreur est survenue.</p>";
-                    console.error(error);
-                });
-        });
-    </script>
 
     <script>
         const form = document.getElementById('contactForm');
