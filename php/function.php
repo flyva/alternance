@@ -53,7 +53,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
     padding: 0;
   }
   .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
     background-color: #ffffff;
     border-radius: 8px;
@@ -84,6 +84,9 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
     color: #0d6efd;
     text-decoration: none;
   }
+  p {
+              margin: 0;
+          }
 </style>
 </head>
 <body>
@@ -93,6 +96,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
     </div>
     <div class="content">
       <p><strong>Bonjour ' . htmlspecialchars($name_mail) . ',</strong></p>
+      <br>
       <p>' . nl2br($body_mail) . '</p>
     </div>
     <div class="footer">

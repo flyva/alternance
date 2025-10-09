@@ -10,9 +10,17 @@ $subject_mail = $_POST['subject_mail'];
 $message_forms = $_POST['message_mail'];
 
 // Paramètre client
-$body_mail_client = "<p>Merci pour votre message. Nous avons bien reçu votre demande et notre équipe l’examine.</p>
-<p>Un membre de l’équipe vous répondra par email dans les plus brefs délais. En attendant, merci de patienter.</p>>
-<p>Si vous avez des informations supplémentaires à nous communiquer, vous pouvez répondre directement à cet email.</p>";
+$body_mail_client = "
+<p><strong>Merci pour votre message&nbsp;!</strong></p>
+
+<p>Je suis entrain de vérifier les branchements (et peut-être de démêler quelques câbles) avant de vous répondre.</p>
+
+<p>Vous recevrez un mail dès que tout est prêt côté régie !</p>
+
+<p>En attendant, gardez les lights allumée et le son sur ON&nbsp;!</p>
+
+<p>Si vous souhaitez un café, une poursuite ou me proposer un entretien, vous pouvez répondre à ce mail.</p>
+";
 
 // Envoi du mail client
 mail_send($adress_mail, $name_mail, null, $subject_mail, $body_mail_client);
