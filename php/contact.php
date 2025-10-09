@@ -4,11 +4,11 @@ require_once 'function.php';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Paramètre standard
-    $adress_mail = htmlspecialchars($_POST['adress_mail']);
-    $name_mail = htmlspecialchars($_POST['name_mail']);
+    $adress_mail = $_POST['adress_mail'];
+    $name_mail = $_POST['name_mail'];
     $attachment_mail = null;
-    $subject_mail = htmlspecialchars($_POST['subject_mail']);
-    $message_forms = htmlspecialchars($_POST['message_mail']);
+    $subject_mail = $_POST['subject_mail'];
+    $message_forms = $_POST['message_mail'];
 
     // Paramètre client
     $body_mail_client = "
@@ -34,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Envoi du mail à l'hote
     mail_send("quentinrault0@gmail.com", $name_mail, null, "Nouveau message", $body_mail_host);
+
+    echo "success"; // On renvoie une réponse pour l’ajax
 
 }else{
 echo "error"; // On renvoie une réponse pour l’ajax}
