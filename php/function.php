@@ -89,6 +89,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
 </style>
 </head>
 <body>
+    <meta charset="UTF-8">
   <div class="container">
     <div class="header">
       Alternance Fest
@@ -96,7 +97,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
     <div class="content">
       <p><strong>Bonjour ' . htmlspecialchars($name_mail) . ',</strong></p>
       <br>
-      <p>' . nl2br($body_mail) . '</p>
+      ' . nl2br($body_mail) . '
     </div>
     <div class="footer">
       © 2025 <a class="footer-link" href="https://alternance-fest.fr">Alternance Fest</a>

@@ -12,13 +12,9 @@ $message_forms = $_POST['message_mail'];
 // Paramètre client
 $body_mail_client = "
 <p><strong>Merci pour votre message&nbsp;!</strong></p>
-
 <p>Je suis entrain de vérifier les branchements (et peut-être de démêler quelques câbles) avant de vous répondre.</p>
-
 <p>Vous recevrez un mail dès que tout est prêt côté régie !</p>
-
 <p>En attendant, gardez les lights allumée et le son sur ON&nbsp;!</p>
-
 <p>Si vous souhaitez un café, une poursuite ou me proposer un entretien, vous pouvez répondre à ce mail.</p>
 ";
 
