@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternance Fest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 25px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #888888;
+            padding: 15px;
+            border-top: 1px solid #eeeeee;
+        }
+        a.footer-link {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        Alternance Fest
+    </div>
+    <div class="content">
+        <p><strong>Bonjour ' . htmlspecialchars($name_mail) . ',</strong></p>
+        <p>' . nl2br($body_mail) . '</p>
+    </div>
+    <div class="footer">
+        © 2025 <a class="footer-link" href="https://alternance-fest.fr">Alternance Fest</a>
+    </div>
+</div>
+</body>
+</html>
