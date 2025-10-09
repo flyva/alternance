@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     echo "success"; // On renvoie une réponse pour l’ajax
 
-    header('Location: ../index.html?message=success#section_4');
 }else{
 echo "error"; // On renvoie une réponse pour l’ajax}
 }
