@@ -38,4 +38,4 @@ $body_mail_host = "<p>Nom: ".$name_mail."</p>
 // Envoi du mail à l'hote
 mail_send($adress_mail, $name_mail, null, $subject_mail, $body_mail_host);
 
-header('Location: ../index.html?message=success');
+header('Location: ../index.html?message=success#section_4');
