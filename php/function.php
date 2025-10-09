@@ -10,9 +10,9 @@ require '../vendor/autoload.php';
 
 function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $body_mail){
 
-//Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
+//Create an instance; passing `true` enables exceptions
     try {
         //Server settings
         $mail->SMTPDebug = 0;                      //Enable verbose debug output
@@ -33,11 +33,12 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
         $mail->addAddress($adress_mail, $name_mail);     //Add a recipient
         $mail->addReplyTo('contact@alternance-fest.fr', 'Alternance Fest');
 
-        //Attachments
-        if(is_null($attachment_mail) ){
-        }else{
-            $mail->addAttachment('../attachment_file_mail/'.$attachment_mail); //Add attachments
-        }
+         // Attachments dynamiques
+         if (!empty($attachment_mail)) {
+             foreach ($attachment_mail as $file) {
+                 $mail->addAttachment($file);
+             }
+         }
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
@@ -99,7 +100,7 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
       Alternance Fest
     </div>
     <div class="content">
-      <p><strong>Bonjour ' . htmlspecialchars($name_mail) . ',</strong></p>
+      <p><strong>Bonjour ' . $name_mail . ',</strong></p>
       <br>
       ' . nl2br($body_mail) . '
     </div>
