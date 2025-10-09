@@ -35,8 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Envoi du mail à l'hote
     mail_send("quentinrault0@gmail.com", $name_mail, null, "Nouveau message", $body_mail_host);
 
-    echo "success"; // On renvoie une réponse pour l’ajax
-
 }else{
 echo "error"; // On renvoie une réponse pour l’ajax}
 }
