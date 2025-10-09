@@ -28,7 +28,6 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
         $mail->setFrom('contact@alternance-fest.fr', 'Alternance Fest');
         $mail->addAddress($adress_mail, $name_mail);     //Add a recipient
         $mail->addReplyTo('contact@alternance-fest.fr', 'Alternance Fest');
-        $mail->addBCC('quentin.rault@alternance-fest.fr');
 
         //Attachments
         if(is_null($attachment_mail) ){

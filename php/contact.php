@@ -23,7 +23,7 @@ $body_mail_client = "
 ";
 
 // Envoi du mail client
-mail_send($adress_mail, $name_mail, null, $subject_mail, $body_mail_client);
+mail_send($adress_mail, $name_mail, null, "Votre message à bien été reçu", $body_mail_client);
 
 
 
@@ -36,6 +36,6 @@ $body_mail_host = "<p>Nom: ".$name_mail."</p>
 <p><strong>Message:</strong> ".$message_forms."</p>";
 
 // Envoi du mail à l'hote
-mail_send($adress_mail, $name_mail, null, $subject_mail, $body_mail_host);
+mail_send("quentinrault0@gmail.com", $name_mail, null, "Nouveau message", $body_mail_host);
 
 header('Location: ../index.html?message=success#section_4');
