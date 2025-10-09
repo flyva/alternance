@@ -24,6 +24,10 @@ function mail_send($adress_mail, $name_mail, $attachment_mail, $subject_mail, $b
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+        // Encodage UTF-8
+        $mail->CharSet = 'UTF-8';
+
+
         //Recipients
         $mail->setFrom('contact@alternance-fest.fr', 'Alternance Fest');
         $mail->addAddress($adress_mail, $name_mail);     //Add a recipient
