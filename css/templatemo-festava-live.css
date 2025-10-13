@@ -513,6 +513,14 @@ strong {
   position: relative;
 }
 
+.fond3-section {
+  background-image: url('../images/edward-unsplash-blur.jpg');
+  background-color: #704010;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .about-image {
   border-radius: var(--border-radius-medium);
   display: block;

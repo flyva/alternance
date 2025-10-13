@@ -105,7 +105,7 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row">
 
                     <div class="col-lg-6 col-10 mx-auto">
-                        <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form ticket-form mb-5 mb-lg-0" action="./php/billeterie.php" method="post" role="form">
                             <h2 class="text-center mb-4">Get started here</h2>
 
                             <div class="ticket-form-body">
@@ -316,6 +316,31 @@ T e m p l a t e M o
 
 -->
     <!-- JAVASCRIPT FILES -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const messageDiv = document.getElementById('message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche le rechargement de la page
+
+            const formData = new FormData(form);
+
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Affiche le message de validation
+                    messageDiv.innerHTML = "<p style='color:green;'>Message envoyé avec succès !</p>";
+                    form.reset(); // Réinitialise le formulaire
+                })
+                .catch(error => {
+                    messageDiv.innerHTML = "<p style='color:red;'>Une erreur est survenue.</p>";
+                    console.error(error);
+                });
+        });
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
