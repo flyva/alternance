@@ -31,17 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $body_mail_client = (function() use ($type_ticket) {
         if ($type_ticket === 'Opt_1') {
             return "
-    <p><strong>Merci pour votre message&nbsp;!</strong></p>
-    <p>Ohhhh un entretien ! Je vous remercie sincèrement.</p>
-    <p>Je me permettrais de vous rappeler avec les data fournis</p>
-    <p>En attendant, gardez les lights allumée et le son sur ON&nbsp;!</p>
+<p><strong>Merci pour votre message&nbsp;!</strong></p>
+    <p>Je ne manquerais pas de vous répondre dans les plus bref délais.</p>
+    <p>En vous souhaitant une excellente journée/soirée,</p>
+    <p>Cordialement,</p>
+    <p>Quentin RAULT</p>
     ";
         } else {
             return "
-    <p><strong>Merci pour votre message&nbsp;!</strong></p>
-    <p>Ohhhh une alternance ! Je vous remercie sincèrement.</p>
-    <p>Je me permettrais de vous rappeler avec les data fournis</p>
-    <p>En attendant, gardez les lights allumée et le son sur ON&nbsp;!</p>
+   <p><strong>Merci pour votre message&nbsp;!</strong></p>
+       <p>Je ne manquerais pas de vous répondre dans les plus bref délais.</p>
+       <p>En vous souhaitant une excellente journée/soirée,</p>
+       <p>Cordialement,</p>
+       <p>Quentin RAULT</p>
     ";
         }
     })();

@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Paramètre client
     $body_mail_client = "
     <p><strong>Merci pour votre message&nbsp;!</strong></p>
-    <p>Je suis entrain de vérifier les branchements (et peut-être de démêler quelques câbles) avant de vous répondre.</p>
-    <p>Vous recevrez un mail dès que tout est prêt côté régie !</p>
-    <p>En attendant, gardez les lights allumée et le son sur ON&nbsp;!</p>
-    <p>Si vous souhaitez un café, une poursuite ou me proposer un entretien, vous pouvez répondre à ce mail.</p>
+    <p>Je ne manquerais pas de vous répondre dans les plus bref délais.</p>
+    <p>En vous souhaitant une excellente journée/soirée,</p>
+    <p>Cordialement,</p>
+    <p>Quentin RAULT</p>
     ";
 
     // Envoi du mail client
