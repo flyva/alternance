@@ -125,7 +125,7 @@ https://templatemo.com/tm-583-festava-live
                     </ul>
 
                     <button type="button" class="btn custom-btn d-lg-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Billeterie
+                        Billetterie
                     </button>
                 </div>
             </div>
@@ -559,12 +559,12 @@ T e m p l a t e M o
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Tous commence içi</h1>
                 </div>
                 <div class="modal-body">
-                    <form class="custom-form mb-lg-0" action="./php/billeterie.php" method="post" role="form" id="ticketForm">
+                    <form class="custom-form mb-lg-0" action="./php/billetterie.php" method="post" role="form" id="ticketForm">
                         <div class="ticket-form-body">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <input type="text" name="ticket-form-name" id="ticket-form-name"
-                                           class="form-control" placeholder="Quentin / RAULT" required>
+                                           class="form-control" placeholder="Nom / Prénom" required>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -574,7 +574,8 @@ T e m p l a t e M o
                                 </div>
 
                                 <div class="col-12">
-                                    <input type="Mail" class="form-control" name="ticket-form-mail"
+                                    <input type="email" class="form-control" name="ticket-form-mail"
+                                           placeholder="mail"
                                             pattern="[^ @]*@[^ @]*"
                                            required>
                                 </div>

@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // Envoi du mail client
-    mail_send($mail_ticket, $name_ticket, $attachment_mail, "Billeterie", $body_mail_client);
+    mail_send($mail_ticket, $name_ticket, $attachment_mail, "Billetterie", $body_mail_client);
 
 
 
