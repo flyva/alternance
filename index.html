@@ -11,6 +11,36 @@
     <title>Alternance Fest</title>
 
     <!-- CSS FILES -->
+
+    <script>
+        window.axeptioSettings = {
+            clientId: "68ee143904a84ceaff9bed58",
+            cookiesVersion: "alternance-fest-fr-EU",
+        };
+
+        (function(d, s) {
+            var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+            e.async = true; e.src = "//static.axept.io/sdk.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N29RBJNG');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL55MZH9YW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GL55MZH9YW');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -529,8 +559,10 @@ T e m p l a t e M o
                             <textarea name="ticket-form-message" rows="3" class="form-control"
                                       id="ticket-form-message" placeholder="Autres informations"></textarea>
 
+                            <div class="g-recaptcha" data-sitekey="6LcH_W0sAAAAAOLK8vo5Cx3koKXsZGtY_xVfCtBQ"></div>
+
                             <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                <button type="submit" class="form-control">Récupérer</button>
+
                             </div>
                         </div>
                     </form>
@@ -595,6 +627,12 @@ T e m p l a t e M o
                 });
         });
     </script>
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+</script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
