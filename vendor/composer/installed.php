@@ -1,22 +1,31 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '0535a64a52d3bdca27c65fd7b21e4218331be20a',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '0535a64a52d3bdca27c65fd7b21e4218331be20a',
+            'dev_requirement' => false,
+        ),
+        'google/recaptcha' => array(
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/recaptcha',
+            'aliases' => array(),
+            'reference' => '56522c261d2e8c58ba416c90f81a4cd9f2ed89b9',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

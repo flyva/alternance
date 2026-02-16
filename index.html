@@ -32,14 +32,9 @@
     })(window,document,'script','dataLayer','GTM-N29RBJNG');</script>
     <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL55MZH9YW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        gtag('config', 'G-GL55MZH9YW');
-    </script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdY020sAAAAADXzRQOfSuy_Ag3XSUuqs_Rz1R9T"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -611,8 +606,10 @@ T e m p l a t e M o
                             <textarea name="ticket-form-message" rows="3" class="form-control"
                                       id="ticket-form-message" placeholder="Autres informations"></textarea>
 
+                            <div class="g-recaptcha" data-sitekey="6LcH_W0sAAAAAOLK8vo5Cx3koKXsZGtY_xVfCtBQ"></div>
+
                             <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                <button type="submit" class="form-control">Récupérer</button>
+
                             </div>
                         </div>
                     </form>
@@ -677,6 +674,12 @@ T e m p l a t e M o
                 });
         });
     </script>
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+</script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

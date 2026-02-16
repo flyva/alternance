@@ -4,6 +4,11 @@ require_once 'function.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    $token = $_POST['g-recaptcha-response'];
+    var_dump($token);
+
+    exit();
+
     // Paramètre standard
     $name_ticket = $_POST['ticket-form-name'];
     $phone_ticket = $_POST['ticket-form-phone'];

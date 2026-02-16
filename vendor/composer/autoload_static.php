@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit135d5729bf2dd2901be83276be890a07
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'ReCaptcha\\' => 10,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
@@ -14,6 +18,10 @@ class ComposerStaticInit135d5729bf2dd2901be83276be890a07
     );
 
     public static $prefixDirsPsr4 = array (
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
