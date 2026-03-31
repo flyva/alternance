@@ -634,7 +634,7 @@ T e m p l a t e M o
                 .then(response => response.text())
                 .then(data => {
                     // Affiche le message de validation
-                    messageTicketDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
+                    messageTicketDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Billet (CV) envoyé avec succès ! Verifié également vos SPAMs  (Courriers indésirables)</p>";
                     ticketForm.reset(); // Réinitialise le formulaire
                 })
                 .catch(error => {
@@ -660,7 +660,7 @@ T e m p l a t e M o
                 .then(response => response.text())
                 .then(data => {
                     // Affiche le message de validation
-                    messageContactDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès !</p>";
+                    messageContactDiv.innerHTML = "<p style='margin-top: 20px;' class='alert alert-success'>Message envoyé avec succès ! Verifier vos SPAMs (Courriers indésirables)</p>";
                     contactForm.reset(); // Réinitialise le formulaire
                 })
                 .catch(error => {
